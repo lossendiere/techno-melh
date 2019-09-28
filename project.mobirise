@@ -46,7 +46,7 @@
         "url": "https://fonts.googleapis.com/css?family=Acme:400"
       }
     ],
-    "uniqCompNum": 60,
+    "uniqCompNum": 67,
     "versionPublish": "4.10.7",
     "screenshot": "screenshot.png"
   },
@@ -1552,6 +1552,158 @@
           "_customHTML": "<section class=\"content2\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Image Width\" name=\"mediaSize\" min=\"1\" max=\"5\" step=\"1\" value=\"4\" required>\n    <input type=\"checkbox\" name=\"rowReverse\" title=\"Reverse\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <select title=\"Text Align\" name=\"align\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" required>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse' : rowReverse}\">\n            <div class=\"image mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 1,\n                             'mbr-col-lg-4': mediaSize==2,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==4,\n                             'mbr-col-lg-9': mediaSize==5}\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/cdcf-stylo-4-couleurs-656x441.jpg\" layout=\"responsive\" width=\"999.6190476190476\" height=\"672\" alt=\"image\" class=\"placeholder-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/cdcf-stylo-4-couleurs-656x441.jpg\" alt title>\n                </amp-img>\n            </div>\n            <div class=\"text-wrap mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 5,\n                             'mbr-col-lg-4': mediaSize==4,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==2,\n                             'mbr-col-lg-9': mediaSize==1,\n                             'align-center': align == 2,\n                             'align-right': align == 3}\">\n                <h2 class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Sound research equals sound strategy.</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">&nbsp;– <b>Les fonctions</b>\n<br>Le(s) fonctions principale(s) en haut du tableau ( besoins à satisfaire )<br>Les fonctions contraintes classées du haut en bas par ordre d’importance.\n<br>\n<br>– <b>Les critères</b> ( doivent être mesurables ou quantifiables )\n<br>Pour chaque fonction ce sont ce(s) critère(s) qui seront mesurés pour savoir si le produit respecte le cahier des charges.\n<br>\n<br>– <b>Les niveaux d’exigences :</b> il ne suffit pas de dire par exemple taille grande ou petite, c’est trop vague, il faut dans les niveaux d’exigence donner des valeurs.</p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rDlo0dxDb0",
           "_anchor": "content2-1m",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".line": {
+              "background-color": "@lineColor",
+              "color": "@lineColor",
+              "text-align": "center",
+              "height": "2px",
+              "margin": "0 auto",
+              "width": "(@lineWidth * 1%)"
+            },
+            ".inner-container": {
+              "margin": "0 auto"
+            },
+            "@media (max-width: 768px)": {
+              ".inner-container": {
+                "width": "100% !important"
+              }
+            },
+            ".iconfont-wrapper": {
+              "display": "inline-block",
+              "height": "(@iconSize * 1rem)",
+              "width": "(@iconSize * 1rem)"
+            },
+            ".amp-iconfont": {
+              "color": "@iconsColor",
+              "vertical-align": "middle",
+              "font-size": "(@iconSize * 1rem)",
+              "width": "(@iconSize * 1rem)"
+            },
+            ".mbr-text, .icon": {
+              "text-align": "left"
+            }
+          },
+          "_name": "content5",
+          "_customHTML": "<section class=\"content5\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <header>Align</header>\n    <select title=\"Text\" name=\"alignBlock\">\n        <option value=\"1\">Left</option>\n        <option value=\"2\" selected>Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Separator</header>\n    <input type=\"checkbox\" title=\"Show Separator\" name=\"showSeparator\" checked>\n    <select title=\"Type\" name=\"separatorType\" condition=\"showSeparator\">\n        <option value=\"1\">Line</option>\n        <option value=\"2\" selected>Icon</option>\n    </select>\n    <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\" condition=\"separatorType==2\">\n    <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#ffffff\" condition=\"showSeparator && separatorType==1\">\n    <input type=\"range\" min=\"10\" max=\"100\" step=\"10\" value=\"40\" title=\"Width\" name=\"lineWidth\" condition=\"showSeparator && separatorType==1\">\n    <input type=\"range\" min=\"1\" max=\"3\" step=\"0.25\" value=\"2\" title=\"Size\" name=\"iconSize\" condition=\"showSeparator && separatorType==2\">\n    <header>Background</header>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#4e84c2\" required>\n    <!-- End block parameters -->\n    </mbr-parameters> \n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-class=\"{'align-center':alignBlock==2,\n                         'align-right':alignBlock==3}\">\n            <hr class=\"line\" mbr-if=\"showSeparator && separatorType==1\">\n            <div class=\"icon align-left\" mbr-if=\"showSeparator && separatorType==2\">\n                <div class=\"iconfont-wrapper\">\n                    <span mbr-icon class=\"amp-iconfont fa-quote-left fa\"></span>\n                </div>\n            </div>\n            <p class=\"mbr-text mbr-white mbr-fonts-style\" mbr-class=\"{'mbr-py-4':showSeparator && separatorType==1,\n                             'mbr-py-2':showSeparator && separatorType==2}\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-text, .icon\">La perfection en technologie n'existe pas<br>Le niveau d'exigence de certains clients peut être sans limites</p>\n            <div class=\"icon align-right\" mbr-if=\"showSeparator && separatorType==2\">\n                <div class=\"iconfont-wrapper\">\n                    <span mbr-icon class=\"amp-iconfont fa-quote-right fa\"></span>\n                </div>\n            </div>\n            <hr class=\"line\" mbr-if=\"showSeparator && separatorType==1\">\n        </div>\n    </div>\n</section>",
+          "_cid": "rDozgn1uRi",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content5-1p"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".text-box": {
+              "padding-right": "200px"
+            },
+            "@media (max-width: 768px)": {
+              ".title-wrap": {
+                "padding-bottom": "2rem"
+              },
+              ".text-box": {
+                "padding-right": "0"
+              }
+            },
+            ".padding-center": {
+              "padding": "0"
+            },
+            ".padding-right": {
+              "padding-left": "200px",
+              "padding-right": "0"
+            }
+          },
+          "_name": "title1",
+          "_customHTML": "<section class=\"title1\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                         'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">What we’re like to partner with</h3>\n        </div>\n        <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                        'align-right':titleAlign==3,\n                        'padding-center':titleAlign==2,\n                        'padding-right':titleAlign==3}\">\n            <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\">Cela signifie que par exemple il est impossible de fabriquer une table de 2m, avec des instruments de mesure suffisaments précis on pourra trouver 1.998 m ou 2,001m.<br>Certains clients pourront y trouver une raison pour affirmer que le prototype ne respecte pas le cahier des charges.</p>\n        </div>\n    </div>\n</section>",
+          "_cid": "rDoAlOHmME",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "title1-1t"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".text-box": {
+              "padding-right": "200px"
+            },
+            "@media (max-width: 768px)": {
+              ".title-wrap": {
+                "padding-bottom": "2rem"
+              },
+              ".text-box": {
+                "padding-right": "0"
+              }
+            },
+            ".padding-center": {
+              "padding": "0"
+            },
+            ".padding-right": {
+              "padding-left": "200px",
+              "padding-right": "0"
+            }
+          },
+          "_name": "title1",
+          "_customHTML": "<section class=\"title1\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <header>Size</header>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n    <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" required>\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#e6f3ff\" selected>\n    </fieldset>\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                         'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">What we’re like to partner with</h3>\n        </div>\n        <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                        'align-right':titleAlign==3,\n                        'padding-center':titleAlign==2,\n                        'padding-right':titleAlign==3}\">\n            <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\"><b>La solution</b><br>Prévoir une flexibilité ( appellée aussi tolérance ) dans le niveau d'exigence d'un cahier des charges.</p>\n        </div>\n    </div>\n</section>",
+          "_cid": "rDoBYMfejJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "title1-1u"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".container-fluid": {
+              "padding-left": "0",
+              "padding-right": "0"
+            }
+          },
+          "_name": "image1",
+          "_customHTML": "<section class=\"image1\" group=\"Images &amp; Videos\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n            <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n            <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n            <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n            <input type=\"range\" inline=\"\" title=\"Image Width\" name=\"imagesSize\" min=\"1\" max=\"5\" value=\"5\" step=\"1\" condition=\"fullWidth == false\" required=\"\">\n        <header>Title</header>\n            <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n            <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showText\">\n                <option value=\"1\">Left</option>\n                <option value=\"2\" selected=\"\">Center</option>\n                <option value=\"3\">Right</option>\n            </select>\n        <header>Background</header>\n            <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" required=\"\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <h3 class=\"mbr-section-title mbr-fonts-style mbr-pb-4 mbr-px-4\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\" mbr-class=\"{'align-left': titleAlign == 1,\n                        'align-center': titleAlign == 2,\n                        'align-right': titleAlign == 3}\">Image</h3>\n        <div class=\"image-block mbr-m-auto align-center\" mbr-class=\"{'mbr-col-md-5': imagesSize==1 &amp;&amp; !fullWidth,\n                         'mbr-col-md-6': imagesSize==2 &amp;&amp; !fullWidth,\n                         'mbr-col-md-7': imagesSize==3 &amp;&amp; !fullWidth,\n                         'mbr-col-md-8': imagesSize==4 &amp;&amp; !fullWidth,\n                         'mbr-col-md-9': imagesSize==5 &amp;&amp; !fullWidth}\">\n            <amp-img class=\"placeholder-loader\" src=\"@PROJECT_PATH@/assets/images/elements-cahier-des-charges-1580x718.jpg\" layout=\"responsive\" width=\"1903.481894150418\" height=\"865\" alt=\"image\">\n                <div placeholder=\"\" class=\"placeholder\"></div>\n                <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/elements-cahier-des-charges-1580x718.jpg\" alt=\"\" title=\"\">\n            </amp-img>\n        </div>\n    </div>\n</section>",
+          "_cid": "rDoziBRIJj",
+          "_anchor": "image1-1q",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
