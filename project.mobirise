@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "histoire-du-design.html",
     "theme": {
       "name": "corporateamp",
       "title": "CorporateAMP",
@@ -46,7 +46,7 @@
         "url": "https://fonts.googleapis.com/css?family=Acme:400"
       }
     ],
-    "uniqCompNum": 104,
+    "uniqCompNum": 106,
     "versionPublish": "4.10.7",
     "screenshot": "screenshot.png"
   },
@@ -306,7 +306,7 @@
     "presentation-algorithmes.html": {
       "settings": {
         "title": "Présentation algorithmique et programmation",
-        "order": 10
+        "order": 11
       },
       "components": [
         {
@@ -735,7 +735,7 @@
     "besoins utilisateurs.html": {
       "settings": {
         "title": "Les besoins des utilisateurs",
-        "order": 8
+        "order": 9
       },
       "components": [
         {
@@ -868,7 +868,7 @@
     "page4.html": {
       "settings": {
         "title": "Les contraintes",
-        "order": 9
+        "order": 10
       },
       "components": [
         {
@@ -1083,7 +1083,7 @@
     "etude-de-marche.html": {
       "settings": {
         "title": "Etude de marché",
-        "order": 7
+        "order": 8
       },
       "components": [
         {
@@ -1370,7 +1370,7 @@
     "cahier-des-charges.html": {
       "settings": {
         "title": "Cahier des charges",
-        "order": 6
+        "order": 7
       },
       "components": [
         {
@@ -1735,7 +1735,7 @@
     "information-numerique.html": {
       "settings": {
         "title": "Information numérique",
-        "order": 5
+        "order": 6
       },
       "components": [
         {
@@ -2317,7 +2317,7 @@
     "page7.html": {
       "settings": {
         "title": "exemple-analyse-concurrence",
-        "order": 4
+        "order": 5
       },
       "components": [
         {
@@ -2473,7 +2473,7 @@
     "applications-smartphone.html": {
       "settings": {
         "title": "construction-applications-mobiles",
-        "order": 3
+        "order": 4
       },
       "components": [
         {
@@ -2916,7 +2916,7 @@
     "tester-application-app-inventor.html": {
       "settings": {
         "title": "tester-application-app-inventor",
-        "order": 2
+        "order": 3
       },
       "components": [
         {
@@ -3244,7 +3244,7 @@
     "comment-expliquer-le-design.html": {
       "settings": {
         "title": "Comment expliquer le design ?",
-        "order": 1
+        "order": 2
       },
       "components": [
         {
@@ -3687,6 +3687,111 @@
           "_once": false,
           "_params": {},
           "_anchor": "info1-2v"
+        }
+      ]
+    },
+    "histoire-du-design.html": {
+      "settings": {
+        "title": "Histoire du design",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@menuBgColor",
+            "overflow": "visible",
+            ".navbar": {
+              "background": "@menuBgColor",
+              "opacity": "0.8"
+            },
+            "& when not (@showBrand) and not (@showLogo)": {
+              ".navbar > .container, .navbar > .container-fluid": {
+                "justify-content": "flex-end !important"
+              }
+            },
+            "& when (@showLogo)": {
+              ".navbar-brand": {
+                ".navbar-logo": {
+                  "max-height": "60px",
+                  "min-width": "30px",
+                  "max-width": "60px",
+                  "amp-img, img": {
+                    "object-fit": "contain"
+                  }
+                }
+              }
+            },
+            "& when (@showBrand)": {
+              ".navbar-caption": {
+                "line-height": "inherit !important"
+              }
+            },
+            ".navbar .navbar-collapse": {
+              "@media (max-width: 991px)": {
+                "background": "@menuBgColor",
+                "& when (@sidebarSide = 'left')": {
+                  "right": "auto",
+                  "left": "0"
+                }
+              }
+            },
+            "& when (@showItems)": {
+              ".nav-link": {
+                "margin": ".667em 1em !important",
+                "padding": "0 !important"
+              },
+              ".dropdown-item.active, .dropdown-item:active": {
+                "background-color": "transparent"
+              },
+              ".dropdown-menu": {
+                "background": "@menuBgColor"
+              }
+            },
+            ".hamburger span": {
+              "background-color": "@hamburgerColor"
+            },
+            ".builder-sidebar": {
+              "background-color": "@menuBgColor"
+            },
+            ".close-sidebar": {
+              "&:focus": {
+                "outline": "2px auto @primaryColor"
+              },
+              "span": {
+                "background-color": "@hamburgerColor"
+              }
+            },
+            ".link": {
+              "padding": "0 0 4px 0 !important",
+              "border-bottom": "2px solid transparent",
+              "&:hover": {
+                "border-bottom": "2px solid #373734"
+              }
+            }
+          },
+          "_name": "menu1",
+          "_customHTML": "<section class=\"menu1 menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, amp-main, amp-sidebar\" always-top=\"\" global=\"\" once=\"menu\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<!--  -->\n\t<header>Size</header>\n\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n\t<input type=\"checkbox\" title=\"Sticky Position\" name=\"sticky\" checked=\"\">\n\t<!--  -->\n\t<header>Show/Hide</header>\t\n\t<input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\">\n\t<input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\">\n\t<header>Sidebar</header>\n\t<select title=\"Side\" name=\"sidebarSide\">\n\t\t<option value=\"left\" selected=\"\">Left</option>\n\t\t<option value=\"right\">Right</option>\n\t</select>\n\t<input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#fff4d6\">\n\t<header>Background</header>\n\t<input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#365c9a\" required=\"\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<!-- <div class=\"menu-wrapper\"> -->\n\t<nav class=\"navbar navbar-dropdown navbar-expand-lg\" mbr-class=\"{'navbar-fixed-top': sticky}\">\n\t\t<div class=\"menu-container\" mbr-class=\"{'container': !fullWidth,\n\t\t\t\t\t\t'container-fluid': fullWidth,\n\t\t\t\t\t\t'mbr-jc-e': !showLogo &amp;&amp; !showBrand}\">\n\t\t\t<!-- SHOW LOGO -->\n\t\t\t<div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n\t\t\t\t<div mbr-if=\"showLogo\" class=\"navbar-logo\">\n\t\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/logo1.png\" layout=\"responsive\" height=\"50\" width=\"50\" alt=\"image\" class=\"placeholder-loader\">\n\t\t\t\t\t\t<div placeholder=\"\" class=\"placeholder\"></div>\n\t\t\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo1.png\" alt=\"\">\n\t\t\t\t\t</amp-img>\n\t\t\t\t</div>\n\t\t\t\t<span mbr-if=\"showBrand\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-white\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">Technologie MELH</a></span>\n\t\t\t</div>\n\t\t\t<!-- SHOW LOGO END -->\n\t\t\t<!-- COLLAPSED MENU -->\n\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t\t<div class=\"hamburger\">\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t\t<span></span>\n\t\t\t\t</div>\n\t\t\t\t</button>\n\t\t\t\t<!-- NAVBAR ITEMS -->\n\t\t\t\t<ul mbr-menu=\"\" class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish &amp;&amp; !showBrand &amp;&amp; !showLogo}\"><li class=\"nav-item\">\n\t\t\t\t\t\t<a class=\"nav-link link text-white\" href=\"index.html\" data-app-selector=\".nav-link,.dropdown-item\" data-app-placeholder=\"Type Text\">Accueil</a>\n\t\t\t\t\t</li></ul>\n\t\t\t\t<!-- NAVBAR ITEMS END -->\n\t\t\t\t<!-- SHOW BUTTON -->\n\t\t\t\t<div mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\">\n\t\t\t\t\t<a class=\"btn btn-md btn-black mbr-bold\" href=\"#\">Join us</a>\n\t\t\t\t</div>\n\t\t\t\t<!-- SHOW BUTTON END -->\n\t\t\t</div>\n\t\t\t<!-- COLLAPSED MENU END -->\n\t\t\t<button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems || showSocial || showButtons\">\n\t\t\t<div class=\"hamburger\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</div>\n\t\t\t</button>\n\t\t\t<button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-if=\"(showItems||showButtons)\">\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</nav>\n\t<!-- AMP plug -->\n\t<amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n\t\t<div class=\"builder-sidebar\" id=\"builder-sidebar\">\n\t\t\t<button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n\t\t\t<span></span>\n\t\t\t<span></span>\n\t\t\t</button>\n\t\t</div>\n\t</amp-sidebar>\n\t<!-- </div> -->\n</section>",
+          "_cid": "rwFNrTfeLA",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "menu",
+          "_params": {},
+          "_anchor": "menu1-2w"
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<div class=\"bkBase_co \">\n<div class=\"bkBase bkInfo\">\n<h3 id=\"Oc83UVg8CtjEBO9M8HJLKd\" class=\"bkBase_ti\"> <span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">Un peu d'histoire</span></h3>\n<div class=\"bkBase_co \">\n<p class=\"txt_p \">A partir de <strong class=\"txt_emphasis_is \">1760</strong>, la <span style=\"text-decoration: underline;\"><strong><span style=\"color: #0000ff; text-decoration: underline;\">Révolution industrielle</span></strong></span> modifie les modes de production. D'une <strong><span style=\"color: #0000ff;\">production artisanale, en petite série</span></strong>, on passe à une <strong><span style=\"color: #0000ff;\">production d'un même objet en grande série</span></strong>.<br>\n<br>\n</p>\n<p class=\"txt_p \"><em><span style=\"text-decoration: underline;\"><strong>Ci dessous petite explication sur le design et à quelle période de notre histoire est il apparut.</strong></span></em></p>\n<p>[video width=\"960\" height=\"720\" mp4=\"http://www.lossendiere.com/wp-content/uploads/2016/09/le-design-commence-avec-la-revolution-industrielle.mp4\"][/video]</p>\n<h3 id=\"Oc83UVg8CtjEBO9M8HJLKd\" class=\"bkBase_ti\"> </h3>\n<h3 class=\"bkBase_ti\"><span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">1851 le Crystal Palace de Joseph Paxton</span></h3>\n<p>Conçu par Joseph Paxton pour <span style=\"text-decoration: underline;\">l'Exposition universelle de Londres de 1851</span>, le Crystal Palace est construit en un temps record de 8 mois à partir d'<strong><span style=\"text-decoration: underline;\"><span style=\"color: #0000ff; text-decoration: underline;\">unités modulaires standardisées, préfabriquées en usine.</span></span></strong><br>\n<br>\nL'édifice est gigantesque: 563 mètres de long sur 263 de large, pour une surface de 70 000 m2. Haut de 36 mètres, il compte 3 300 colonnes de fonte, 2 224 poutrelles et 300 000 éléments de verre.<br>\n<br>\nCet hymne à la gloire de la nouvelle société industrielle rencontre une très vive opposition de la part de certains critiques d'art.<br>\nLe débat ainsi ouvert entre <span style=\"color: #0000ff;\"><strong>les partisans de la technologie et de l'industrie</strong></span> et <strong><span style=\"color: #0000ff;\">ceux qui défendent la beauté de l'objet unique</span></strong>.</p>\n<p><img class=\"wp-image-1172 size-full aligncenter\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/crystal-palace.jpg\" alt=\"crystal-palace\" width=\"469\" height=\"333\"></p>\n<h3 id=\"nOOAFfPCm5fqmEV3fMuz0e\" class=\"bkBase_ti\"><span style=\"color: #ff0000; background-color: #ccffff;\"> </span></h3>\n<h3 id=\"Oc83UVg8CtjEBO9M8HJLKd\" class=\"bkBase_ti\"><span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">Chaise Thonet N°14 - créer par l'ébéniste Michael Thonet en 1859</span></h3>\n<p><img class=\"wp-image-1174 size-full aligncenter\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/1-chaise-bisrot-N-14-Thonet.jpg\" alt=\"1-chaise-bisrot-N-14-Thonet\" width=\"486\" height=\"324\"></p>\n<div class=\"bkBase bkInfo\">\n<div class=\"bkBase_co \">\n<p class=\"txt_p \">Grâce à une technique nouvelle de bois courbé utilisant la vapeur, l'entreprise Thonet produit la <strong class=\"txt_emphasis_is \">chaise n°14</strong>, la nouvelle technique permet de <strong><span style=\"color: #0000ff;\">simplifier la conception de la chaise</span></strong> ( <strong>6 éléments en bois, 10 vis et 2 ecrous</strong> ) ce qui a pu <strong><span style=\"color: #0000ff;\">réduire son prix grâce a une fabrication plus rapide en usine</span></strong>.</p>\n<p class=\"txt_p \">Cette chaise a été <span style=\"color: #0000ff;\"><strong class=\"txt_emphasis_is \">vendu à plus de 50 million d'exemplaire</strong></span> elle a été <span style=\"color: #0000ff;\"><strong>créer il y a plus de 150 ans</strong></span> mais on peut encore la trouver aujourd'hui dans des bistrots.</p>\n<p class=\"txt_p \">Son succès n'est pas seulement du à son prix ( au XIXème siècle elle coûtait <span style=\"color: #0000ff;\"><strong>moins cher qu'une bouteille de vin</strong></span>) mais aussi à son <span style=\"color: #0000ff;\"><strong>design et la façon dont elle remplit sa fonction</strong></span></p>\n<h3 id=\"yWvUcrz5VohVoiA0s0OqPi\" class=\"bkBase_ti\"><span style=\"text-decoration: underline;\">Transport des chaises Thonet</span></h3>\n<div class=\"bkBase_co \">\n<p class=\"txt_p \">Parmi les nombreuses <strong><span style=\"color: #0000ff;\">contraintes que doit respecter un designer figure maintenant l'impact sur l'environnement.</span></strong></p>\n<p class=\"txt_p \"><span style=\"text-decoration: underline;\">Le transport de l'usine jusqu'au magasin ou client a une grande influence sur l'environnement</span>, ce n'était pas encore une préoccupation en 1859 mais le fait qu'on puisse faire tenir <strong><span style=\"color: #0000ff;\">36 chaises en kit Thonet dans 1m cube</span></strong>, va également contribuer à faire <span style=\"color: #0000ff;\"><strong>baisser le coût de distribution</strong></span> et permettre d'exporter la chaise Thonet dans tous les pays du monde.</p>\n</div>\n<p class=\"txt_p \"><img class=\"wp-image-1175 size-full aligncenter\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/2-Transport-chaise-thonet.jpg\" alt=\"2-Transport-chaise-thonet\" width=\"474\" height=\"482\"></p>\n<h3 id=\"Oc83UVg8CtjEBO9M8HJLKd\" class=\"bkBase_ti\"><span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">Le Taylorisme et Henry Ford</span></h3>\n<p>La Ford T, première voiture construite en grande série.<br>\n<br>\n<img class=\"wp-image-1185 size-full alignleft\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/la-ford-T.jpg\" alt=\"la-ford-T\" width=\"443\" height=\"361\"></p>\n<p>Au Etats-Unis, au début du XXème siècle, <span style=\"color: #3366ff;\"><strong>Henry Ford</strong></span> invente la première chaîne de montage pour fabriquer voiture la Ford T (1908 à 1927) en suivant une organisation scientifique du travail imaginée par <span style=\"color: #3366ff;\"><strong>Frederick Winslow Taylor</strong></span>.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<h3 id=\"Oc83UVg8CtjEBO9M8HJLKd\" class=\"bkBase_ti\"> </h3>\n<h3 class=\"bkBase_ti\"><span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">En Allemagne en 1910 premier pas du design global avec l'architecte Peter Behrens</span></h3>\n<p class=\"txt_p \">La collaboration entre l'architecte <strong>Peter Behrens</strong> et l'entreprise d'électromécanique <strong>AEG</strong> donne naissance au premier grand exemple de « <span style=\"color: #3366ff;\"><strong>design global</strong></span> ».</p>\n<p class=\"txt_p \"><span style=\"text-decoration: underline;\"><strong>Behrens intervient dans</strong></span> la <span style=\"color: #3366ff;\"><strong>conception des produits</strong></span>, redessine le <span style=\"color: #3366ff;\"><strong>logotype</strong></span>, conçoit les <span style=\"color: #3366ff;\"><strong>en-têtes de papier</strong></span> à lettres, les <span style=\"color: #3366ff;\"><strong>affiches publicitaires</strong></span>, l'<span style=\"color: #3366ff;\"><strong>emballage</strong></span>, et imagine même les <span style=\"color: #3366ff;\"><strong>nouveaux bâtiments</strong></span> de l'usine berlinoise d'AEG et les cités dans lesquelles sont logés les ouvriers.</p>\n<p class=\"txt_p \"><img class=\"alignnone wp-image-1186 size-full\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/Evolution-Logo-AEG.jpg\" alt=\"Evolution-Logo-AEG\" width=\"727\" height=\"253\"></p>\n<h3><span style=\"text-decoration: underline;\"><span style=\"color: #ff0000;\"><strong>Exemple de design global actuel</strong></span></span></h3>\n<p><img class=\"alignnone size-large wp-image-7397\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/Design-global-1-1024x447.jpg\" alt=\"\" width=\"1024\" height=\"447\"></p>\n<p>&nbsp;</p>\n<h3 class=\"bkBase_ti\"><span style=\"color: #ff0000;\"><img class=\"alignnone size-full wp-image-1183\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/puce-fleche.png\" alt=\"puce-fleche\" width=\"38\" height=\"38\">Années 1920 - début du fonctionnalisme et style épuré dans le design ( début du modernisme ) <br>\n</span></h3>\n<p class=\"title\">L'objet industriel remet en cause le rôle de la décoration. Autrefois synonyme de \"<strong class=\"txt_emphasis_is \">bel objet</strong>\", <strong class=\"txt_emphasis_is \">d'objet coûteux</strong>, <strong class=\"txt_emphasis_is \">d'objet \"culturel\"</strong>, il est maintenant jugée vulgaire (banal).</p>\n<p class=\"title\">\"<span style=\"color: #0000ff;\"><strong>La forme suit la fonction</strong></span>\"  cette phrase de l’architecte américain Louis Sullivan à inspirée de nombreux designer <br>\n<br>\n<strong><span style=\"text-decoration: underline;\">Selon les designers et architectes adeptes du fonctionnalisme :</span></strong></p>\n<ul>\n\t<li>La beauté résulte d’une pureté de la fonction et une absence d’ornementation.</li>\n\t<li>L'esthétique dans un design est adapté par rapport aux fonctions de l'objet.<br>\n<br>\nDans les années 1920, des <strong><span style=\"color: #0000ff;\">mouvements hérités du Cubisme, du Futurisme, du Constructivisme russe</span></strong>, rejettent les effets décoratifs. <br>\nLeurs recherches théoriques, confrontées au réel, posent les <span style=\"color: #0000ff;\">bases d'un modernisme qui influencera tout le XXème siècle</span>.</li>\n</ul>\n<h3><span style=\"text-decoration: underline;\">Exemples de mouvements modernistes :</span></h3>\n<p>&nbsp;</p>\n<h3><span style=\"color: #0000ff; background-color: #ffff99;\"><strong>Mouvement hollandais De Stijl</strong></span></h3>\n<p><img class=\"wp-image-1235  alignleft\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/chaise-red-and-blue-1024x540.jpg\" alt=\"chaise-red-and-blue\" width=\"768\" height=\"393\"></p>\n<p class=\"bkBase_ti\"><strong><span style=\"text-decoration: underline;\">Chaise :</span> <span style=\"color: #808080;\">Red&amp;Blue    <br>\n<span style=\"text-decoration: underline; color: #000000;\">Designer :</span> Gerrit Rietveld</span></strong><br>\n<br>\n<strong><span style=\"text-decoration: underline;\">Année de création :</span> <span style=\"color: #808080;\">1917</span>     Mouvement De Stilj (Hollande)</strong></p>\n<p class=\"bkBase_ti\"><strong><span style=\"text-decoration: underline;\">Inspiration :</span> <span style=\"color: #808080;\">Composition du peintre Piet Mondrian</span></strong></p>\n<p class=\"bkBase_ti\">  </p>\n<p class=\"bkBase_ti\">  </p>\n<p class=\"bkBase_ti\"> </p>\n<p class=\"bkBase_ti\" style=\"text-align: center;\"> </p>\n<p class=\"bkBase_ti\" style=\"text-align: center;\"> </p>\n<p id=\"Aa54fjt5FnjYV4XRZxCI9c\" class=\"bkBase_ti\" style=\"text-align: center;\"><strong><span style=\"text-decoration: underline;\"><span style=\"color: #3366ff; text-decoration: underline;\">Exemple d'influence du mouvement De Stilj dans le design des objets de notre quotidien</span></span></strong></p>\n<p><img class=\"wp-image-1238 size-full aligncenter\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/carre-piet-mondrian.jpg\" alt=\"carre-piet-mondrian\" width=\"385\" height=\"360\"></p>\n<p>&nbsp;</p>\n<h3><span style=\"color: #0000ff; background-color: #ffff99;\"><strong>Ecole le Bauhaus - Allemagne - 1919 / 1933</strong></span></h3>\n<p><span style=\"color: #0000ff; background-color: #ffff99;\"><strong><span style=\"color: #000000; background-color: #ffffff;\">La pédagogie de l'école est très novatrice, elle est divisée en ateliers qui sont chacun dirigés conjointement par un artiste et par un artisan.</span></strong><br>\n</span></p>\n<p><strong><span style=\"text-decoration: underline;\"><span style=\"color: #0000ff; background-color: #ffffff; text-decoration: underline;\">Walter Gropius le fondateur et premier directeur en 1919 en 1919 :</span></span></strong></p>\n<p><span style=\"color: #0000ff; background-color: #ffff99;\"><span style=\"background-color: #ffffff; color: #000000;\"> <em>“<span style=\"background-color: #ffff99;\">Le but final de toute activité plastique est la construction ! […] Architectes, sculpteurs, peintres ; nous devons tous revenir au travail artisanal, parce qu’il n’y a pas d’art professionnel.</span><br>\n<span style=\"background-color: #ffff99;\"> Il n’existe aucune différence essentielle entre l’artiste et l’artisan. […] Voulons, concevons et créons ensemble la nouvelle construction de l’avenir, qui embrassera tout en une seule forme : architecture, art plastique et peinture […]</span>”</em>.</span></span></p>\n<p><span style=\"color: #0000ff; background-color: #ffff99;\"><span style=\"background-color: #ffffff; color: #000000;\"><span style=\"text-decoration: underline;\"><strong>La pluridisciplinarité</strong></span> au cœur du projet du Bauhaus, elle se traduit par une ouverture à toutes les disciplines, qui sont traitées sans hiérarchie : arts du métal, du verre, du bois, du textile, mais aussi photographie, danse, etc.</span><br>\n<br>\n<span style=\"background-color: #ffffff; color: #000000;\">L'école le Bauhauss va recruter les plus grands artistes de leur temps, sans aucune distinction de discipline ou de nationalité. </span><br>\n<span style=\"background-color: #ffffff; color: #000000;\">Le programme du Bauhaus a suscité l'adhésion d'un grand nombre d'artistes d'<a style=\"background-color: #ffffff; color: #000000;\" title=\"Avant-garde (art)\" href=\"https://fr.wikipedia.org/wiki/Avant-garde_%28art%29\">avant-garde</a> de toute l'Europe et inspiré des changements dans le design et l'architecture.</span><br>\n<br>\n</span></p>\n<table style=\"height: 221px; width: 1056px;\">\n<tbody>\n<tr style=\"height: 22.5332px;\">\n<td style=\"width: 527px; height: 22.5332px; text-align: center;\"><strong>Exemple de \"design produit\" crée au Bauhaus</strong></td>\n<td style=\"width: 528px; height: 22.5332px; text-align: center;\"><strong>Architecture du Bauhaus</strong></td>\n</tr>\n<tr style=\"height: 66px;\">\n<td style=\"width: 527px; height: 66px;\"><img class=\"size-medium wp-image-1243 alignleft\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/fauteuil-Wassily-300x279.jpg\" alt=\"fauteuil-Wassily\" width=\"300\" height=\"279\"><br>\n<strong><span style=\"text-decoration: underline;\">Designer :</span></strong> Marcel Breuer<br>\nAnnée : 1925 - 1926<br>\n<span style=\"text-decoration: underline;\"><strong>Inspiration :</strong> </span><br>\nguidon et cadre de vélo<br>\n<br>\nPremier siège réalisé en tube d'acier grâce à un nouveau procédé de construction par cintrage de tube d'acier sans soudure.<br>\n<br>\n </td>\n<td style=\"width: 528px; height: 66px;\"> <img class=\" wp-image-1245 alignleft\" src=\"http://www.lossendiere.com/wp-content/uploads/2016/09/immeuble-bauhauss-256x300.jpg\" alt=\"immeuble-bauhauss\" width=\"221\" height=\"259\">L'école du Bauhaus a une architecture novatrice pour l'époque, faite de béton, verre et acier.<br>\n<br>\nCette architecture est à l'origine du style international qui est celui des grattes ciels modernes qu'on peut trouver un peut partout dans le monde, notamment à New York et au quartier d'affaire de la Défense au nord de Paris.</td>\n</tr>\n</tbody>\n</table>",
+          "_customCSS": "/* Type valid AMP CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-2x",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         }
       ]
     }
