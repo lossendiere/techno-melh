@@ -5866,7 +5866,9 @@
           "_global": false,
           "_once": false,
           "_params": {},
-          "_anchor": "video2-4e"
+          "_anchor": "video2-4e",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         }
       ]
     }
