@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "fonctionnalite-design.html",
+    "currentPage": "creer-application-mobile.html",
     "theme": {
       "name": "corporateamp",
       "title": "CorporateAMP",
@@ -412,7 +412,7 @@
         }
       ]
     },
-    "fonctionnalite-design.html": {
+    "creer-application-mobile.html": {
       "settings": {
         "main": true,
         "title": "Accueil",
