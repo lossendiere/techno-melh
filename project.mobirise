@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "creer-application-mobile.html",
+    "currentPage": "algorithme-et-algorigramme.html",
     "theme": {
       "name": "corporateamp",
       "title": "CorporateAMP",
@@ -412,7 +412,7 @@
         }
       ]
     },
-    "creer-application-mobile.html": {
+    "algorithme-et-algorigramme.html": {
       "settings": {
         "main": true,
         "title": "Accueil",
