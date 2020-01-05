@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "gerer-projet-technologique.html",
+    "currentPage": "outils-gerer-projet.html",
     "theme": {
       "name": "corporateamp",
       "title": "CorporateAMP",
@@ -59,7 +59,7 @@
         "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
       }
     ],
-    "uniqCompNum": 194,
+    "uniqCompNum": 196,
     "versionPublish": "4.11.6",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -871,6 +871,99 @@
           "_protectedParams": [],
           "_global": true,
           "_once": "menu",
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".image": {
+              "& when not (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "1rem",
+                  "padding-right": "3rem"
+                }
+              },
+              "& when (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "3rem",
+                  "padding-right": "1rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".btn": {
+              "padding-right": "16px",
+              "& span": {
+                "transition": "none",
+                "margin-left": "5px",
+                "&::before": {
+                  "position": "relative",
+                  "right": "-5px"
+                }
+              }
+            },
+            "amp-img": {
+              "box-shadow": "0 0 0.825rem rgba(30, 30, 32, 0.3)"
+            },
+            "H2": {
+              "color": "#1856ba"
+            }
+          },
+          "_name": "content7",
+          "_customHTML": "<section class=\"content7\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline title=\"Image Width\" name=\"mediaSize\" min=\"1\" max=\"5\" step=\"1\" value=\"1\" required>\n    <input type=\"checkbox\" name=\"rowReverse\" title=\"Reverse\" checked>\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n    <select title=\"Text Align\" name=\"align\">\n        <option value=\"1\" selected>Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#f8f6f6\" required>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse' : rowReverse}\">\n            <div class=\"image mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 1,\n                             'mbr-col-lg-4': mediaSize==2,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==4,\n                             'mbr-col-lg-9': mediaSize==5}\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/portrait-hanry-gantt-645x927.jpg\" layout=\"responsive\" width=\"315.88996763754045\" height=\"454\" alt=\"image\" class=\"placeholder-loader\">\n                    <div placeholder class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/portrait-hanry-gantt-645x927.jpg\" alt title>\n                </amp-img>\n            </div>\n            <div class=\"text-wrap mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 5,\n                             'mbr-col-lg-4': mediaSize==4,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==2,\n                             'mbr-col-lg-9': mediaSize==1,\n                             'align-center': align == 2,\n                             'align-right': align == 3}\">\n                <h2 class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Le diagramme de Gantt</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>Henry Laurence Gantt</b>&nbsp;( 1861 - 1919 ) fut ingénieur en mécanique et consultant en management (cela regroupe les techniques d’organisation et de gestion de l’entreprise).\n<br>\n<br>Il travailla pour des entreprises aux États Unis et il collabora avec <b>Frederick Winslow Taylor</b> qui mis en place une organisation scientifique du travail.\n<br>\n<br>Le diagramme de planification des taches qu’il a mis au point et qui porte son nom est encore très utilisé aujourd’hui.</p>\n               \n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rMJ6RAHXLa",
+          "_anchor": "content7-5e",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".image": {
+              "& when not (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "1rem",
+                  "padding-right": "3rem"
+                }
+              },
+              "& when (@rowReverse)": {
+                "@media (min-width: 992px)": {
+                  "padding-left": "3rem",
+                  "padding-right": "1rem"
+                }
+              },
+              "@media (max-width: 991px)": {
+                "padding-bottom": "1rem"
+              }
+            },
+            "amp-img": {
+              "box-shadow": "0 0 0.825rem rgba(30, 30, 32, 0.3)"
+            },
+            "H2": {
+              "color": "#1856ba"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"content2\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n    <input type=\"range\" inline=\"\" title=\"Image Width\" name=\"mediaSize\" min=\"1\" max=\"5\" step=\"1\" value=\"3\" required=\"\">\n    <input type=\"checkbox\" name=\"rowReverse\" title=\"Reverse\">\n    <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n    <select title=\"Text Align\" name=\"align\">\n        <option value=\"1\" selected=\"\">Left</option>\n        <option value=\"2\">Center</option>\n        <option value=\"3\">Right</option>\n    </select>\n    <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\" required=\"\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-row-reverse' : rowReverse}\">\n            <div class=\"image mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 1,\n                             'mbr-col-lg-4': mediaSize==2,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==4,\n                             'mbr-col-lg-9': mediaSize==5}\">\n                <amp-img src=\"@PROJECT_PATH@/assets/images/les-taches-exament-3h-627x247.jpg\" layout=\"responsive\" width=\"558.4615384615385\" height=\"220\" alt=\"image\" class=\"placeholder-loader\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/les-taches-exament-3h-627x247.jpg\" alt=\"\" title=\"\">\n                </amp-img>\n            </div>\n            <div class=\"text-wrap mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-3': mediaSize == 5,\n                             'mbr-col-lg-4': mediaSize==4,\n                             'mbr-col-lg-6': mediaSize==3,\n                             'mbr-col-lg-8': mediaSize==2,\n                             'mbr-col-lg-9': mediaSize==1,\n                             'align-center': align == 2,\n                             'align-right': align == 3}\">\n                <h2 class=\"mbr-fonts-style mbr-pb-3\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">Le principe</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\"><b>Voici ci-contre un exemple simple </b>donc qui ne nécessite pas de diagramme de Gantt pour l’organisation mais permet de mieux comprendre le principe du diagramme de Gantt.<br><br><u>Il s’agit de s’organiser pour réussir un examen écrit dont la durée est 3h.</u><br></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rMJflKWmYf",
+          "_anchor": "content2-5f",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
           "_params": {}
         }
       ]
