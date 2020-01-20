@@ -60,7 +60,7 @@
         "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
       }
     ],
-    "uniqCompNum": 175,
+    "uniqCompNum": 176,
     "versionPublish": "4.11.6",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -1753,6 +1753,70 @@
           "_customHTML": "<section class=\"title3\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#373734\" condition=\"showBorder\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n            <div class=\"custom-col-1 mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Cours</h3>\n                </div>\n                <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3,\n                                     'padding-center':titleAlign==2,\n                                     'padding-right':titleAlign==3}\">\n                    <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\">1 - <a href=\"http://www.lossendiere.com/wp-content/uploads/2017/04/Architecture-app-inventor-2.mp4\" target=\"_blank\">Comment est construite une application mobile</a><br>2 - <a href=\"http://techno-melh.xyz/applications-smartphone.html\" target=\"_blank\">Les applications et capteurs des smartphones</a><br>2 - Différence entre <a href=\"http://techno-melh.xyz/difference-analogique-numerique.html\" target=\"_blank\">analogique, logique et numérique</a>.<a href=\"https://www.lossendiere.com/2019/01/27/rapide-historique-du-design-2/\" target=\"_blank\"><br></a><br></p>\n                </div>\n                \n            </div>\n            <div class=\"custom-col-2 mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Documents élèves et évaluation</h3>\n                </div>\n                <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3,\n                                     'padding-center':titleAlign==2,\n                                     'padding-right':titleAlign==3}\">\n                    <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\"><a href=\"assets/files/evaluation-app-capteurs-telephones-portables-v3-word.pdf\" target=\"_blank\">Document élève</a> ( devoir maison )<br><u>Consignes vidéos pour :</u><br>1 - <a href=\"https://www.lossendiere.com/2017/02/07/premiere-application-hello-world/\" target=\"_blank\">créer l'application</a><br>2 - <a href=\"http://techno-melh.xyz/tester-application-app-inventor.html\" target=\"_blank\">tester l'application</a><a href=\"https://www.lossendiere.com/2017/02/07/premiere-application-hello-world/\" target=\"_blank\"><br></a>Vous pouvez utilisez l'application App Inventor installée <br>- sur le <a href=\"http://ai2.appinventor.mit.edu/\" target=\"_blank\">serveur Google</a> ( nécessite un compte Google )<br>- ou <a href=\"http://code.appinventor.mit.edu/login/\" target=\"_blank\">sur ce serveur</a><br><br></p>\n                </div>\n                \n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rO9gT9lJsd",
           "_anchor": "title3-4u",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "@media (max-width: 768px)": {
+              ".title-wrap": {
+                "padding-bottom": "2rem"
+              },
+              ".text-box": {
+                "padding-right": "0"
+              }
+            },
+            ".custom-col-1": {
+              "padding-right": "39px",
+              "border-right": "1px solid @borderColor",
+              "& when not (@showBorder)": {
+                "border-right": "none"
+              },
+              "@media (max-width: 768px)": {
+                "padding-right": "1rem",
+                "border-right": "none"
+              }
+            },
+            ".custom-col-2": {
+              "padding-left": "40px",
+              "@media (max-width: 768px)": {
+                "padding-left": "1rem",
+                "padding-top": "20px"
+              }
+            },
+            ".btn": {
+              "padding-right": "16px",
+              "& span": {
+                "transition": "none",
+                "margin-left": "5px",
+                "&::before": {
+                  "position": "relative",
+                  "right": "-5px"
+                }
+              }
+            }
+          },
+          "_name": "title3",
+          "_customHTML": "<section class=\"title3\" group=\"Article\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Show Border\" name=\"showBorder\" checked>\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#373734\" condition=\"showBorder\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Background Image\" value=\"file:///C:/Users/lossendiere/AppData/Local/Mobirise.com/Mobirise/projects/project-2019-11-03_175154/assets/images/background2-1.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n            <div class=\"custom-col-1 mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Documents d'aide</h3>\n                </div>\n                <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3,\n                                     'padding-center':titleAlign==2,\n                                     'padding-right':titleAlign==3}\">\n                    <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\">1 -&nbsp;<a href=\"https://www.lossendiere.com/2016/09/23/presentation-et-installation-de-app-inventor/\" target=\"_blank\">présentation et installation de App Inventor</a><br>2 -&nbsp;<a href=\"https://www.lossendiere.com/2017/02/07/methode-de-conception-dune-application-mobile/\" target=\"_blank\">méthode de conception d'une application mobile</a></p>\n                </div>\n                \n            </div>\n            <div class=\"custom-col-2 mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6\">\n                <div class=\"title\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3}\" mbr-if=\"showTitle || showSubtitle\">\n                    <h3 class=\"mbr-section-title mbr-fonts-style mbr-bold mbr-pb-3\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Fiches de synthèse</h3>\n                </div>\n                <div class=\"text-box\" mbr-class=\"{'align-center':titleAlign==2,\n                                     'align-right':titleAlign==3,\n                                     'padding-center':titleAlign==2,\n                                     'padding-right':titleAlign==3}\">\n                    <p class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\">1 -<a href=\"http://techno-melh.xyz/assets/files/Fiche-connaissance-identifier-besoin.pdf\" target=\"_blank\">&nbsp;</a><br><br><br></p>\n                </div>\n                \n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rO9iDWHNFq",
+          "_anchor": "title3-4v",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
