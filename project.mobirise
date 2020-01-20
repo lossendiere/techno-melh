@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "lire-et-crer-un-algorithme.html",
+    "currentPage": "lire-et-creer-un-algorithme.html",
     "theme": {
       "name": "corporateamp",
       "title": "CorporateAMP",
@@ -441,7 +441,7 @@
         }
       ]
     },
-    "lire-et-crer-un-algorithme.html": {
+    "lire-et-creer-un-algorithme.html": {
       "settings": {
         "main": true,
         "title": "Home",
